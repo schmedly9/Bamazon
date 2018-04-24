@@ -21,7 +21,7 @@ connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
   }
-  loadProducts();
+promptAddItem();
 });
 
 // Function to load the products table from the database and print results to the console
@@ -62,8 +62,8 @@ function promptAddItem(inventory) {
       {
         type: "input",
         name: "item qty",
-        message:"enter quantity to add to inventory",
-
+        message:"enter quantity to add to inventory"
+      
   }],
  function addItem(item_id, quantity) {
   connection.query(
